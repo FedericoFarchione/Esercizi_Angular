@@ -20,30 +20,31 @@
     <nb-card>
       <nb-card-header>Operazioni</nb-card-header>
       <nb-card-body>
-        <form class="form-horizontal">
+        <form class="form-horizontal" #f="ngForm">
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-1 form-control-label" style="padding-top:15px">Parametro 1</label>
+            <label  class="col-sm-1 form-control-label" style="padding-top:15px">Numero1</label>
             <div class="col-sm-5">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="Numeri">
+              <input name="first" [(ngModel)]="parr" type="number" class="form-control" placeholder="Insert Number">
             </div>
-            <label for="inputEmail3" class="col-sm-1 form-control-label" style="padding-top:15px">Parametro 2</label>
+            <label class="col-sm-1 form-control-label" style="padding-top:15px">Numero2</label>
             <div class="col-sm-5">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="Numeri">
+              <input name="second" [(ngModel)]="parr1" type="number" class="form-control" placeholder="Insert Number">
             </div>
             <div class="col-sm-3" style = "margin:25px 0px">
-              <button type="submit" class="btn btn-warning">Addizione</button>
+              <button type="submit" ng class="btn btn-warning" id="addizione" (click)="sum()">Addizione</button>
             </div>
             <div class="col-sm-3" style = "margin:25px 0px">
-              <button type="submit" class="btn btn-warning">Sottrazione</button>
+              <button type="submit" class="btn btn-warning" id="Sottrazione" (click)="meno()">Sottrazione</button>
             </div>
             <div class="col-sm-3" style = "margin:25px 0px">
-              <button type="submit" class="btn btn-warning">Moltiplicazione</button>
+              <button type="submit" class="btn btn-warning" id="moltiplicazione" (click)="moltipli()">Moltiplicazione</button>
             </div>
             <div class="col-sm-3" style = "margin:25px 0px">
-              <button type="submit" class="btn btn-warning">Divisione</button>
+              <button type="submit" class="btn btn-warning" id="divisione" (click)="dividi()">Divisione</button>
             </div>
-            <div class="col-sm-12">
-                <input type="email" class="form-control" id="inputEmail3" placeholder="Risultato">
+            <label  class="col-sm-1 form-control-label" style="padding-top:15px"></label>
+            <div class="col-sm-10" type="text" margin="auto" >
+                <input name ="res"[(ngModel)]="this.somma" type="number" class="btn btn-warning col-sm-10" placeholder="Risultato" readonly>
             </div>
           </div>
         </form>
@@ -57,25 +58,25 @@
     <nb-card>
       <nb-card-header>Concatena Stringhe</nb-card-header>
       <nb-card-body>
-        <form class="form-horizontal">
+        <form class="form-horizontal" #fu="ngForm">
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-1 form-control-label" style="padding-top:15px">Nome</label>
+            <label class="col-sm-1 form-control-label" style="padding-top:15px">Nome</label>
             <div class="col-sm-5">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="Nome">
+              <input name="name" [(ngModel)]="name" type="text" class="form-control" placeholder="Nome">
             </div>
-            <label for="inputEmail3" class="col-sm-1 form-control-label" style="padding-top:15px">Cognome</label>
+            <label class="col-sm-1 form-control-label" style="padding-top:15px">Cognome</label>
             <div class="col-sm-5">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="Cognome">
+              <input name="surname" [(ngModel)]="surname" type="text" class="form-control" placeholder="Cognome">
             </div>
             <div class="col-sm-5">
             </div>
             <div class="col-sm-2" style = "margin:25px 0px">
-              <button type="submit" class="btn btn-warning">Concatena</button>
+              <button type="submit" class="btn btn-warning"(click)="conc()">Concatena</button>
             </div>
             <div class="col-sm-5">
             </div>
             <div class="col-sm-12">
-                <input type="email" class="form-control" id="inputEmail3" placeholder="Risultato">
+                <input name="concat"[(ngModel)]="this.name_sur" type="text" class="form-control" id="concat" placeholder="Risultato" readonly>
             </div>
           </div>
         </form>

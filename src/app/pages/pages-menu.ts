@@ -84,11 +84,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
       // },
       {
         title: 'Registrazione',//'Form Layouts'
-        link: '/pages/forms/layouts',
+        link: '/pages/forms/registrazione',
       },
       {
         title: 'Op_Arit_String',//'Buttons',
-        link: '/pages/forms/buttons',
+        link: '/pages/forms/nonsochecazzofare',
       },
        // {
        //   title: 'Datepicker',

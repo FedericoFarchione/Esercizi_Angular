@@ -113,35 +113,39 @@
     <nb-card>
       <nb-card-header>Dati:</nb-card-header>
       <nb-card-body>
+        <form #fi="ngForm">
         <div class="row">
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="inputFirstName">Nome</label>
-              <input type="text" class="form-control" id="inputFirstName" placeholder="Nome">
+              <label for="name">Nome</label>
+              <input name="name" [(ngModel)]="name" type="text" class="form-control" placeholder="Nome">
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="inputLastName">Cognome</label>
-              <input type="text" class="form-control" id="inputLastName" placeholder="Cognome">
+              <label for="surname">Cognome</label>
+              <input type="text" [(ngModel)]="surname" class="form-control" name="surname" placeholder="Cognome">
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="inputEmail">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+              <label for="mail">Email</label>
+              <input type="email" [(ngModel)]="mail" class="form-control" name ="mail"  placeholder="Email">
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="inputWebsite">Ripeti Email</label>
-              <input type="text" class="form-control" id="inputWebsite" placeholder="Email">
+              <label for="checkmail">Ripeti Email</label>
+              <input type="email" [(ngModel)]="checkmail" class="form-control" name="checkmail" placeholder="Ripeti Email">
             </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary"(click)="send()">Registrati</button>
+        <input name="s_up" type="text" class="form-control" placeholder="Registration" onlyread>
+        <!-- <h2>{{this.fu.value.ris}}</h2> -->
+        </form>
       </nb-card-body>
     </nb-card>
   </div>

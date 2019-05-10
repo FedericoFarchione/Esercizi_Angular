@@ -20,11 +20,11 @@ const routes: Routes = [{
       component: FormLayoutsComponent,
     },
     {
-      path: 'layouts',
+      path: 'registrazione',
       component: FormLayoutsComponent,
     },
     {
-      path: 'buttons',
+      path: 'nonsochecazzofare',//buttons
       component: ButtonsComponent,
     },
     {
